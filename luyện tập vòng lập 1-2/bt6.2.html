@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var sout;
+    sout = "<table br  width='300' cellspacing='0' cellpadding='3'>";
+    for (i = 1; i < 10; i++) {
+        sout = sout + "<tr>";
+
+        for(j=1;j<=7;j++)
+        {
+            if(!(( i== 1&& (j==1 ||j==4||j==7))
+            ||(i==7&&(j==1||j==7))
+            ||(i==8&&(j<=2||j>=6))
+            ||i==9&&(j<=3||j>=5))){
+                sout += "<td>";
+                sout += '*';
+                sout += '</td>';
+                
+                // sout = sout + "<td>" + 'x' + "</td>";
+            }else{
+                sout += "<td>";
+                sout += '&nbsp;';
+                sout += '</td>';
+
+                //  sout = sout + "<td>" + '&nbsp' + "</td>";
+            }
+            
+        }
+        
+       
+    } 
+
+    sout = sout + "</table>";
+    document.write(sout);
+    </script>
+</body>
+</html>

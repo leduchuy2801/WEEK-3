@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Tổng 3 số đầu tiên chia hết cho 5 trong 20 số fibo</p>
+    <script>
+        var n1 = 0;
+        var n2 = 1;
+        var _resul = " 0 1";
+        var total = 0;
+        var count = 0;
+        for (i = 2; i < 20; i++) {
+            var tam = n2;
+            n2 = n1 + n2;
+            if (n2 % 5 == 0 || count == 3) {
+                console.log(`số dầu tiên chia hết cho 7 ${n2}`);
+                var total = total + n2;
+                count++;
+                if (count == 3) {
+                    break;
+                }
+            }
+
+            n1 = tam;
+            _resul = _resul + " " + n2 + " ";
+
+        }
+        console.log(_resul);
+        console.log(`tong cac so chia het cho 7 ${total}`);
+    </script>
+
+
+
+    </script>
+</body>
+
+</html>
