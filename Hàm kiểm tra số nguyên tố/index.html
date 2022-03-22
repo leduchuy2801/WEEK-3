@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // kiểm tra xem n có phải là số nguyên tố hay k : 
+//      function isprime(n){
+//     //flag = 0 => không phải số nguyên tố
+//     //flag = 1 => số nguyên tố
+    
+//     let flag = 1;
+
+//     if (n <2) return flag = 0; /*Số nhỏ hơn 2 không phải số nguyên tố => trả về 0*/
+    
+//     /*Sử dụng vòng lặp while để kiểm tra có tồn tại ước số nào khác không*/
+//     let i = 2;
+//     while(i <n){
+//         if( n%i==0 ) {
+//             flag = 0;
+//             break; /*Chỉ cần tìm thấy 1 ước số là đủ và thoát vòng lặp*/
+//         }
+//         i++;
+//     }
+
+//     return flag;
+// }
+
+// let n= prompt("Nhap so tu nhien= ");
+    
+
+// let check = isprime(n);
+
+// if( check == 1 ) document.write(n + " la so nguyen to");
+// else document.write(n + " khong phai la so nguyen to");
+
+
+//  liệt ke các số nguyên tố nhỏ hơn n : 
+
+function isprime(n){
+    //flag = 0 => không phải số nguyên tố
+    //flag = 1 => số nguyên tố
+    
+    let flag = 1;
+
+    if (n <2) return flag = 0; /*Số nhỏ hơn 2 không phải số nguyên tố => trả về 0*/
+    
+    /*Sử dụng vòng lặp while để kiểm tra có tồn tại ước số nào khác không*/
+    let i = 2;
+    while(i <n ){
+        if( n%i==0  ) {
+            flag = 0;
+            break; /*Chỉ cần tìm thấy 1 ước số là đủ và thoát vòng lặp*/
+        }
+
+
+        i++;
+    }
+
+    return flag;
+}
+
+let n= prompt(" nhap mot so n: ");
+
+let i = 0, check=0, result ="";
+   while ( i < n ){
+    check = isprime(i);
+    if( check == 1 ) result += i + " ";
+    ++i;
+}
+document.write("  Các số nguyên tố của n là : " + result); 
+
+    </script>
+</body>
+</html>
