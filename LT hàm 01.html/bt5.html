@@ -9,26 +9,38 @@
 </head>
 
 <body>
-    <script>
-        let star1_input = prompt("Nhập tên ngôi sao");
-        let stars = ["Polaris", "Aldebran", "Dendeb", "vega", "Altair", "Dubhe", "Regulus"];
-        let constellations = ["Ursa minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
-        function search_constellation() {
-            string=document.foms['search_constellation']['stars'].value;
-            search=stars.indexOf(string);
-            for (let i of star) {
+    <div>
 
-if (search != -1) {
-    console.log('search_constellation').innerHTML = stars[search];
+        <div>
+           
+            <h1>STAR</h1>
+            <form name="searchStar">
+                <p>extraterrestrial stars </p>
+                <input type="text" name="star1"> <br>
+                <input type="button" value="search star" onclick="searcHStar()">
+                <p id="starhere"></p>
+            </form>
+        </div>
+        <script>
+            function searcHStar() {
+                var star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+                var star2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+                stringg = document.forms['searchStar']["star1"].value;
+                searchh = star.indexOf(stringg);
+                for (let i of star) {
 
-} else {
-   console.log('search_constellation').innerHTML = "Không tìm thấy";
+                    if (searchh != -1) {
+                        document.getElementById('starhere').innerHTML = star2[searchh];
 
-}
-}
-}
-     
-    </script>
+                    } else {
+                        document.getElementById('starhere').innerHTML = "Không tìm thấy";
+
+                    }
+                }
+            }
+
+        </script>
+    </div>
 </body>
 
 </html>
