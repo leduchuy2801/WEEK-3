@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+   
+        
+        <input type="text" id="arrayRandom">Any Array containing the character<br>
+        <button onclick="runLesson9()">Print out array</button>
+        <p id="showArrayRandom"></p><br>
+    </div>
+    <script>
+    function runLesson9() {
+    let string = document.getElementById('arrayRandom').value;
+    let array = ['h','a','t','h','r',5,3,8,,3,4,5,9,3,1,8,'g','w','u','h','g'];
+    let x = 0;
+    let time = 0;
+    // array = string.split('');
+    // alert(array);
+
+    for (let i = 0; i < array.length; i++) {
+        if (string == array[i]) {
+            x = 1;
+            time++;
+        // } else {
+            // return -1;
+        }
+    }
+    if (x == 1) {
+        alert(`in array số lần ${time}`)
+    } else {
+        alert(`-1`)
+    }
+}
+
+    </script>
+</body>
+</html>
+ <!-- let x = 0;
+    let time = 0;
+    // array = string.split('');
+    // alert(array);
+
+    for (let i = 0; i < array.length; i++) {
+        if (string == array[i]) {
+            x = 1;
+            time++;
+        // } else {
+            // return -1;
+        }
+    }
+    if (x == 1) {
+        alert(`in array số lần ${time}`)
+    } else {
+        alert(`-1`)
+    }
+} -->
